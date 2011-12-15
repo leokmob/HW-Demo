@@ -101,7 +101,7 @@ app.get('/deal/:id', function(req, res) {
 app.get('/previewdeal/:id', function(req, res) {
     dealRepository.findById(req.params.id, function(error, deal) {
 		if (deal.fileName == "") {
-			deal.fileName = "/images/default.gif"
+			deal.fileName = "default.gif"
 		}
         res.render('deal_view.jade', { locals: {
             	title: "Deal Preview",
