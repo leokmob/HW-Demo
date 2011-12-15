@@ -1,0 +1,10 @@
+h1= title
+a(href="/deal/new") New Deal >
+#deals
+    - each deal in deals
+      div.deal
+        div.created_at= deal.created_at
+        div.title 
+            a(href="/deal/"+deal._id.toHexString())!= deal.title
+        div.body= deal.body
+        div.body= deal.fileName

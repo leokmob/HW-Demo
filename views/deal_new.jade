@@ -1,0 +1,15 @@
+a(href="/") < Back to Deals
+h1= title
+form( method="post", enctype="multipart/form-data")
+    div
+        div
+            span Title :
+            input(type="text", name="title", id="editDealTitle")
+        div
+            span Body :
+            textarea( name="body", rows=20, id="editDealBody)
+        div
+            span Upload Image :
+            input(type="file", name="image")
+        dev#editDealSubmit
+            input(type="submit", value="Send")

@@ -1,0 +1,87 @@
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a class="backbutton ui-btn-left" data-rel="back" data-icon="arrow-l">Cancel</a>
+		<h1 id="title">Edit Contact</h1>
+		<a class="donebutton ui-btn-right" data-icon="check" data=>Done</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" class="cc-int-list">
+			<li data-role="fieldcontain">
+				<label for="emailField">Email:</label>
+				<input type="email" id="emailField"></input>
+			</li>
+		</ul>
+		<ul data-role="listview" data-inset="true"  class="cc-int-list">
+			<li data-role="fieldcontain">
+				<label for="firstNameField">First Name:</label>
+				<input type="text" id="firstNameField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="middleNameField">Middle Name:</label>
+				<input type="text" id="middleNameField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="lastNameField">Last Name:</label>
+				<input type="text"  id="lastNameField"></input>
+			</li>
+		</ul>
+		<ul data-role="listview" data-inset="true" class="cc-int-list">
+			<li data-role="fieldcontain">
+				<label for="jobTitleField">Job Title:</label>
+				<input type="text"  id="jobTitleField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="companyField">Company:</label>
+				<input type="text"  id="companyField"></input>
+			</li>
+		</ul>
+		<ul data-role="listview" data-inset="true" class="cc-int-list">
+			<li data-role="fieldcontain">
+				<label for="homePhoneField">Home Phone:</label>
+				<input type="tel"  id="homePhoneField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="workPhoneField">Work Phone:</label>
+				<input type="tel"  id="workPhoneField"></input>
+			</li>
+		</ul>
+		<ul data-role="listview" data-inset="true"class="cc-int-list">
+			<li data-role="fieldcontain">
+				<label for="address1Field">Address 1:</label>
+				<input type="text"  id="address1Field"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="address2Field">Address 2:</label>
+				<input type="text"  id="address2Field"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="address3Field">Address 3:</label>
+				<input type="text"  id="address3Field"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="cityField">City:</label>
+				<input type="text"  id="cityField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="stateField">State:</label>
+				<input type="text"  id="stateField"></input>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="zipCodeField">Zip Code:</label>
+				<input type="text"  id="zipCodeField"></input>
+			</li>
+		</ul>
+		<ul class="contactlists cc-int-list" data-role="listview" data-inset="true">
+			<li id="contactlistsheader" data-role="list-divider">Contact List Subscriptions</li>
+			<li id="contactlistsform" class="cc-check-list">
+				<div >
+					<fieldset data-role="controlgroup">
+					</fieldset>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div class='mynavbar' selectedindex='none'></div>
+	</div>	
+</div>

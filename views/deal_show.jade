@@ -1,0 +1,11 @@
+a(href="/") &lt; Back to Deals
+h1= title
+div.deals
+    div.created_at= deal.created_at
+    div.title= deal.title
+    div.body= deal.body
+    div.body= deal.fileName
+    div
+        a(href="/deal/push/"+deal._id.toHexString()) Start Deal >
+        &nbsp; &nbsp;
+        a(href="/previewdeal/"+deal._id.toHexString(), target="_blank") Preview >

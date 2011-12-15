@@ -1,0 +1,53 @@
+body {
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 13px;
+  text-align: center;
+  text-stroke: 1px rgba(255,255,255,0.10);
+  color: #555;
+}
+h1,
+h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #343434;
+}
+h1 {
+  text-shadow: 1px 2px 2px #ddd;
+  font-size: 60px;
+}
+#deals {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+#deals .deal {
+  margin: 20px;
+}
+#deals .deal .created_at {
+  display: none;
+}
+#deals .deal .title {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #eee;
+}
+#deals .deal .body {
+  background-color: #ffa;
+}
+.deal .created_at {
+  display: none;
+}
+.deal input[type =text] {
+  width: 490px;
+  margin-left: 16px;
+}
+.deal input[type =button],
+.deal input[type =submit] {
+  text-align: left;
+  margin-left: 440px;
+}
+.deal textarea {
+  width: 490px;
+  height: 90px;
+}

@@ -1,0 +1,9 @@
+h1= deal.title
+div.deals
+    div.created_at= deal.created_at
+    div.title= deal.title
+    div.body= deal.body
+    div
+        img(src="/images/" + deal.fileName, width="200px")
+    div
+        a(href="/previewcode/"+deal._id.toHexString()) Grab Deal &gt;
