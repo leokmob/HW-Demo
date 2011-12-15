@@ -55,7 +55,8 @@ app.get('/deal/new', function(req, res) {
 });
 
 app.post('/deal/new', function(req, res, next){
-	if (req.files.image.filename == '') {
+	//LK-TBD temporarily disable fiel uplods :()
+	if (true || req.files.image.filename == '') {
 	    dealRepository.save({
 	        title: req.param('title'),
 	        body: req.param('body'),
