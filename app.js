@@ -140,7 +140,7 @@ app.get('/deal/push/:id', function(req, res) {
 		console.log("Push a deal. Token count: " + tokens.length);
 		if (tokens.length > 0) {
 			ua.pushNotification(tokens, "You have a new deal!", null, null,
-									   "url", "/previewdeal/" + req.params.id, function(error) {
+									    "/previewdeal/" + req.params.id, function(error) {
 				console.log("error: " + error);
 				res.redirect("/");
 			});
