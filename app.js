@@ -6,6 +6,7 @@ var express = require('express');
 var util = require('util');
 var fs = require('fs');
 var DealRepository = require('./dealrepository-mongodb').DealRepository;
+var TokenRepository = require('./tokenrepository-memory').TokenRepository;
 var UA = require("./lib/urban-airship");
 var ua = new UA("xWZjMbfyShygnvcEM573rg", "B1xZzItfQf2dEKKiikFEow", "uQIp7-gOSti3CbXwSCMsRA");
 
@@ -36,6 +37,7 @@ app.configure('production', function(){
 // Routes
 
 var dealRepository = new DealRepository('localhost', 27017);
+var tokenRepository = new TokenRepository();
 
 app.get('/', function(req, res){
     dealRepository.findAll( function(error, deals){
@@ -133,29 +135,42 @@ app.post('/deal/addOpenInfo', function(req, res) {
 
 // Push notification using urban airship wrapper. Note: token comes from application registration.
 
-var token="<undefined token>";
-
 app.get('/deal/push/:id', function(req, res) {
-	console.log("Pushing deal to token: " + token);
-	if (token != "") {
-		ua.pushNotification(token, "You have a new deal!", null, null,
-								   "url", "/previewdeal/" + req.params.id, function(error) {
-			console.log("error: " + error);
+	tokenRepository.findAll(function(errors, tokens){
+		console.log("Push a deal. Token count: " + tokens.length);
+		if (tokens.length > 0) {
+			ua.pushNotification(tokens, "You have a new deal!", null, null,
+									   "url", "/previewdeal/" + req.params.id, function(error) {
+				console.log("error: " + error);
+				res.redirect("/");
+			});
+		}
+		else
 			res.redirect("/");
-		});
-	}
+	});
 });
 
 app.get('/device/register/:token', function(req, res) {
-	token = req.params.token;
-	console.log("registration!!!!");
-	console.log("token:" + token);
-	ua.registerDevice(token, function(error) {
-		if (error != null)
-			token = "";
+	var token = req.params.token;
+	console.log("incoming token: " + token);
+	if (typeof token != "undefined" && Token != null && token != "") {
+		ua.registerDevice(token, function(error) {
+			if (error == null) {
+				tokenRepository.save(token, function(errors, tokens){
+					console.log("Registered token. New token count: " + tokens.length);					
+				});
+			}
+		});		
+	}
+});
+
+app.get('/device/removeall', function(req, res) {
+	tokenRepository.removeAll(function(errors, tokens){
+		console.log("Remove all. New token count: " + tokens.length);
 		res.redirect("/");
 	});
 });
+
 
 app.listen(3000);
 
