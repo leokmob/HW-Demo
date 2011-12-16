@@ -157,10 +157,17 @@ app.get('/device/register/:token', function(req, res) {
 		ua.registerDevice(token, function(error) {
 			if (error == null) {
 				tokenRepository.save(token, function(errors, tokens){
-					console.log("Registered token. New token count: " + tokens.length);					
+					console.log("Registered token. New token count: " + tokens.length);	
+					res.redirect("/");				
 				});
 			}
+			else {
+				res.redirect("/");
+			}
 		});		
+	}
+	else {
+		res.redirect("/");
 	}
 });
 
