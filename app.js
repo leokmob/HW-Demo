@@ -153,7 +153,7 @@ app.get('/deal/push/:id', function(req, res) {
 app.get('/device/register/:token', function(req, res) {
 	var token = req.params.token;
 	console.log("incoming token: " + token);
-	if (typeof token != "undefined" && Token != null && token != "") {
+	if (typeof token != "undefined" && token != null && token != "") {
 		ua.registerDevice(token, function(error) {
 			if (error == null) {
 				tokenRepository.save(token, function(errors, tokens){
