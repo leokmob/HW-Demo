@@ -1,4 +1,4 @@
-a(href="/") < Back to Deals
+a(href="/admin") < Back to Deals
 h1= title
 form( method="post", enctype="multipart/form-data")
     div
@@ -11,5 +11,7 @@ form( method="post", enctype="multipart/form-data")
         div
             span Upload Image :
             input(type="file", name="image")
+        br
+        br
         dev#editDealSubmit
-            input(type="submit", value="Send")
+            input(type="submit", value="Save")

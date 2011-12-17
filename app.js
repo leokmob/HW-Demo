@@ -39,7 +39,9 @@ app.configure('production', function(){
 var dealRepository = new DealRepository('localhost', 27017);
 var tokenRepository = new TokenRepository();
 
-app.get('/', function(req, res){
+// NOTE: "/" route points to the mobilehome (further down)
+
+app.get('/admin', function(req, res){
     dealRepository.findAll( function(error, deals){
         res.render('index.jade', { locals: {
             	title: 'Deals',
@@ -68,7 +70,7 @@ app.post('/deal/new', function(req, res, next){
 	        body: req.param('body'),
 			fileName: ''
 	    }, function( error, deals) {
-		      res.redirect('/')						
+		      res.redirect("/admin")						
 		});
 	}
 	else {
@@ -87,7 +89,7 @@ app.post('/deal/new', function(req, res, next){
 			        body: req.param('body'),
 					fileName: storedFileName
 			    }, function( error, deals) {
-				      res.redirect('/')						
+				      res.redirect("/admin")						
 				});
 	        }
 	    });
@@ -117,6 +119,15 @@ app.post('/deal/addOpenInfo', function(req, res) {
 });
 
 // MOBILE APP ROUTES
+app.get('/', function(req, res) {
+    dealRepository.findAll( function(error, deals){
+        res.render('mobile/home.jade', { locals: {
+            	title: 'Deals',
+            	deals:deals
+            }
+        });
+    })
+});
 
 app.get('/m/deal/:id', function(req, res) {
     dealRepository.findById(req.params.id, function(error, deal) {
@@ -162,14 +173,15 @@ app.get('/deal/push/:id', function(req, res) {
 			ua.pushNotification(tokens, "You have a new deal!", null, null,
 									    "/m/deal/" + req.params.id, function(error) {
 				console.log("error: " + error);
-				res.redirect("/");
+				res.redirect("/admin");
 			});
 		}
 		else
-			res.redirect("/");
+			res.redirect("/admin");
 	});
 });
 
+// Valled by the device to register its APNS token with this application
 app.get('/device/register/:token', function(req, res) {
 	var token = req.params.token;
 	console.log("incoming token: " + token);
@@ -194,7 +206,7 @@ app.get('/device/register/:token', function(req, res) {
 app.get('/device/removeall', function(req, res) {
 	tokenRepository.removeAll(function(errors, tokens){
 		console.log("Remove all. New token count: " + tokens.length);
-		res.redirect("/");
+		res.redirect("/admin");
 	});
 });
 
