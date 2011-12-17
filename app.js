@@ -39,7 +39,15 @@ app.configure('production', function(){
 var dealRepository = new DealRepository('localhost', 27017);
 var tokenRepository = new TokenRepository();
 
-// NOTE: "/" route points to the mobilehome (further down)
+app.get('/', function(req, res) {
+    dealRepository.findAll( function(error, deals){
+        res.render('index.jade', { locals: {
+            	title: 'Deals',
+            	deals:deals
+            }
+        });
+    })
+});
 
 app.get('/admin', function(req, res){
     dealRepository.findAll( function(error, deals){
@@ -119,15 +127,6 @@ app.post('/deal/addOpenInfo', function(req, res) {
 });
 
 // MOBILE APP ROUTES
-app.get('/', function(req, res) {
-    dealRepository.findAll( function(error, deals){
-        res.render('mobile/home.jade', { locals: {
-            	title: 'Deals',
-            	deals:deals
-            }
-        });
-    })
-});
 
 app.get('/m/deal/:id', function(req, res) {
     dealRepository.findById(req.params.id, function(error, deal) {
@@ -153,7 +152,7 @@ app.get('/m/code/:id', function(req, res) {
     });
 });
 
-app.get('/m/home', function(req, res) {
+app.get('/m', function(req, res) {
     dealRepository.findAll( function(error, deals){
         res.render('mobile/home.jade', { locals: {
             	title: 'Deals',
@@ -162,7 +161,6 @@ app.get('/m/home', function(req, res) {
         });
     })
 });
-
 
 // Push notification using urban airship wrapper. Note: token comes from application registration.
 
