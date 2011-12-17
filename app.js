@@ -49,6 +49,9 @@ app.get('/', function(req, res){
     })
 });
 
+// WEB SITE ROUNTES
+
+// Show new deal form
 app.get('/deal/new', function(req, res) {
     res.render('deal_new.jade', { locals: {
         	title: 'New Deal'
@@ -56,6 +59,7 @@ app.get('/deal/new', function(req, res) {
     });
 });
 
+// Post new deal
 app.post('/deal/new', function(req, res, next){
 	//LK-TBD temporarily disable fiel uplods :()
 	if (true || req.files.image.filename == '') {
@@ -90,6 +94,7 @@ app.post('/deal/new', function(req, res, next){
 	}
 });
 
+//Show deal page
 app.get('/deal/:id', function(req, res) {
     dealRepository.findById(req.params.id, function(error, deal) {
         res.render('deal_show.jade', { locals: {
@@ -100,29 +105,7 @@ app.get('/deal/:id', function(req, res) {
     });
 });
 
-app.get('/previewdeal/:id', function(req, res) {
-    dealRepository.findById(req.params.id, function(error, deal) {
-		if (deal.fileName == "") {
-			deal.fileName = "default.gif"
-		}
-        res.render('deal_view.jade', { locals: {
-            	title: "Deal Preview",
-	            deal:deal
-	        }
-        });
-    });
-});
-
-app.get('/previewcode/:id', function(req, res) {
-    dealRepository.findById(req.params.id, function(error, deal) {
-        res.render('code_view.jade', { locals: {
-            	title: "Deal Preview",
-	            deal:deal
-	        }
-        });
-    });
-});
-
+// Future: Add deal open information from mobile app
 app.post('/deal/addOpenInfo', function(req, res) {
     dealRepository.addOpenInfoToDeal(req.param('_id'), {
         person: req.param('person'),
@@ -133,6 +116,43 @@ app.post('/deal/addOpenInfo', function(req, res) {
        });
 });
 
+// MOBILE APP ROUTES
+
+app.get('/m/deal/:id', function(req, res) {
+    dealRepository.findById(req.params.id, function(error, deal) {
+		if (deal.fileName == "") {
+			deal.fileName = "default.gif"
+		}
+		console.log(deal)
+        res.render('mobile/deal_view.jade', { locals: {
+            	title: "Deal Preview",
+	            deal:deal
+	        }
+        });
+    });
+});
+
+app.get('/m/code/:id', function(req, res) {
+    dealRepository.findById(req.params.id, function(error, deal) {
+        res.render('mobile/code_view.jade', { locals: {
+            	title: "Deal Preview",
+	            deal:deal
+	        }
+        });
+    });
+});
+
+app.get('/m/home', function(req, res) {
+    dealRepository.findAll( function(error, deals){
+        res.render('mobile/home.jade', { locals: {
+            	title: 'Deals',
+            	deals:deals
+            }
+        });
+    })
+});
+
+
 // Push notification using urban airship wrapper. Note: token comes from application registration.
 
 app.get('/deal/push/:id', function(req, res) {
@@ -140,7 +160,7 @@ app.get('/deal/push/:id', function(req, res) {
 		console.log("Push a deal. Token count: " + tokens.length);
 		if (tokens.length > 0) {
 			ua.pushNotification(tokens, "You have a new deal!", null, null,
-									    "/previewdeal/" + req.params.id, function(error) {
+									    "/m/deal/" + req.params.id, function(error) {
 				console.log("error: " + error);
 				res.redirect("/");
 			});

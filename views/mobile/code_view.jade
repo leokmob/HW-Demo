@@ -1,0 +1,11 @@
+div(data-role="page", data-theme="d")
+    div(data-role="header", data-theme="b")
+        a(href="/m/deal/"+deal._id.toHexString(), data-icon="arrow-l", data-direction="reverse") Back
+        h1= deal.title
+    div(data-role="content")
+        div.deals(style="text-align:center;")
+            //div.created_at= deal.created_at
+            h3= deal.title
+            h4= deal.body
+            div
+                img(src="/images/temp_barcode.jpg", width="200px")
