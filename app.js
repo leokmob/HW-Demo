@@ -5,7 +5,8 @@
 var express = require('express');
 var util = require('util');
 var fs = require('fs');
-var DealRepository = require('./dealrepository-mongodb').DealRepository;
+//var DealRepository = require('./dealrepository-mongodb').DealRepository;
+var DealRepository = require('./dealrepository-memory').DealRepository;
 var TokenRepository = require('./tokenrepository-memory').TokenRepository;
 var UA = require("./lib/urban-airship");
 var ua = new UA("xWZjMbfyShygnvcEM573rg", "B1xZzItfQf2dEKKiikFEow", "uQIp7-gOSti3CbXwSCMsRA");
