@@ -1,39 +1,47 @@
 body {
   font-family: "Helvetica Neue", "Lucida Grande", "Arial";
   font-size: 13px;
-  text-align: center;
   text-stroke: 1px rgba(255,255,255,0.10);
   color: #555;
 }
 h1,
 h2 {
+	/*
   margin: 0;
   font-size: 22px;
   color: #343434;
+  */
 }
 h1 {
+	/*
   text-shadow: 1px 2px 2px #ddd;
   font-size: 60px;
+  */
 }
 #deals {
-  text-align: left;
+ /* text-align: left;
   margin-left: auto;
   margin-right: auto;
   width: 320px;
+  */
 }
 #deals .deal {
-  margin: 20px;
+ /*  margin: 20px; */
 }
 #deals .deal .created_at {
   display: none;
 }
 #deals .deal .title {
+	/*
   font-weight: bold;
   text-decoration: underline;
   background-color: #eee;
+  */
 }
 #deals .deal .body {
+	/*
   background-color: #ffa;
+  */
 }
 .deal .created_at {
   display: none;
@@ -50,4 +58,38 @@ h1 {
 .deal textarea {
   width: 490px;
   height: 90px;
+}
+
+.deal time.created_at {
+	display: block;
+	font-size: 12px;
+	margin: .6em 0 1.0em 0;
+}
+
+
+
+.ui-hw-wrap .ui-li-heading,
+.ui-hw-wrap .ui-li-desc {
+	white-space: normal;
+}
+
+.ui-field-contain {
+padding: 1.5em 0;
+margin: 0;
+border-bottom-width: 0px;
+}
+
+.ui-hw-button-wrapper-web {
+
+
+}
+
+.form-btn-wrapper {
+	
+	margin: 0px 0px 0px 22%;
+}
+
+.form-btn-wrapper .ui-btn {
+	width: 200px;
+	
 }

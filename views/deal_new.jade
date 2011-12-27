@@ -1,17 +1,18 @@
-a(href="/admin") < Back to Deals
-h1= title
-form( method="post", enctype="multipart/form-data")
-    div
-        div
-            span Title :
-            input(type="text", name="title", id="editDealTitle")
-        div
-            span Body :
-            textarea( name="body", rows=20, id="editDealBody)
-        div
-            span Upload Image :
-            input(type="file", name="image")
-        br
-        br
-        dev#editDealSubmit
-            input(type="submit", value="Save")
+div(data-role="page", data-theme="d")
+    div(data-role="header")
+        a(href="/admin",data-role="button", data-icon="arrow-l", data-iconpos="left", data-theme="b", class="ui-btn-left") Deals
+        h1= title
+    div(data-role="content")
+        form( method="post", enctype="multipart/form-data")
+            div
+                div(data-role="fieldcontain")
+                    label(for="editDealTitle") Title 
+                    input#editDealTitle(type="text", name="title", id="editDealTitle")
+                div(data-role="fieldcontain")
+                    label(for="editDealBody") Body
+                    textarea#editDealBody( name="body", rows=20, id="editDealBody)
+                div(data-role="fieldcontain")
+                    label.ui-input-text(for="editDealImage") Upload Image
+                    input#editDealImage(type="file", name="image")
+                div#editDealSubmit.form-btn-wrapper
+                    input(type="submit", value="Save", data-theme="b")

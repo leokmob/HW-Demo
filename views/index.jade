@@ -1,24 +1,18 @@
-h1= title
-a(href="/deal/new") New Deal >
-#deals
-    - each deal in deals
-      div.deal
-        div.created_at= deal.created_at
-        div.title 
-            a(href="/deal/"+deal._id.toHexString())!= deal.title
-        div.body= deal.body
-        div.body= deal.fileName
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-a(href="/device/removeall") DEMO ONLY! REMOVE ALL DEVICES
+div(data-role="page", data-theme="d")
+    div(data-role="header")
+        h1= title
+    div(data-role="content")
+        ul#deals(data-role="listview", data-inset="true")
+            - each deal in deals
+                li.deal.ui-hw-wrap
+                    a(href="/deal/"+deal._id.toHexString(),rel="external")
+                        time.created_at(pubdate="pubdate")= deal.created_at
+                        h3.title= deal.title
+                        p.body= deal.body
+                        p.body= deal.fileName       
+        fieldset.ui-grid-a.ui-hw-button-wrapper-web
+            div.ui-block-a
+                a(href="/device/removeall", data-role="button",  data-iconpos="right", data-theme="e", data-icon="delete") DEMO ONLY! REMOVE ALL DEVICES
+            div.ui-block-b
+                a.ui-btn-right(href="/deal/new",data-role="button", data-icon="add", data-iconpos="right", data-theme="b") New Deal
+                            

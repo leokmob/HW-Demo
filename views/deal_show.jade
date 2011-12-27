@@ -1,11 +1,16 @@
-a(href="/admin") &lt; Back to Deals
-h1= title
-div.deals
-    div.created_at= deal.created_at
-    div.title= deal.title
-    div.body= deal.body
-    div.body= deal.fileName
-    div
-        a(href="/deal/push/"+deal._id.toHexString()) PUSH THE DEAL >
-        &nbsp; &nbsp;
-        a(href="/m/deal/"+deal._id.toHexString(), target="_blank") Preview >
+div(data-role="page", data-theme="d")
+    div(data-role="header")
+        a(href="/admin",data-role="button", data-icon="arrow-l", data-iconpos="left", data-theme="b", class="ui-btn-left") Deals
+        h1= title
+    div(data-role="content")
+        ul.deal(data-role="listview", data-inset="true")
+            li(data-role="list-divider")= deal.title
+            li.ui-hw-wrap
+                time.created_at(pubdate="pubdate")= deal.created_at
+                p.body= deal.body
+                p.body= deal.fileName
+        fieldset.ui-grid-a.ui-hw-button-wrapper-web
+            div.ui-block-a
+                a(href="/deal/push/"+deal._id.toHexString(), data-role="button",  data-iconpos="right", data-theme="e", data-icon="delete") PUSH THE DEAL
+            div.ui-block-b
+                a(href="/m/deal/"+deal._id.toHexString(),data-role="button", data-icon="add", data-iconpos="right", data-theme="b", target="_blank") Preview
