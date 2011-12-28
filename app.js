@@ -116,6 +116,19 @@ app.get('/deal/:id', function(req, res) {
     });
 });
 
+//Show preview deal page
+
+app.get('/deal/preview/:id', function(req, res) {
+    dealRepository.findById(req.params.id, function(error, deal) {
+        res.render('deal_preview.jade', { locals: {
+	            title: deal.title,
+	            deal:deal
+	        }
+        });
+    });
+});
+/**/
+
 // Future: Add deal open information from mobile app
 app.post('/deal/addOpenInfo', function(req, res) {
     dealRepository.addOpenInfoToDeal(req.param('_id'), {

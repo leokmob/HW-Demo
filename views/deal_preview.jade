@@ -1,0 +1,7 @@
+div(data-role="page", data-theme="d")
+    div(data-role="header")
+        a(href="/deal/"+deal._id.toHexString(),data-role="button", data-icon="arrow-l", data-iconpos="left", data-theme="b", class="ui-btn-left") Back to Deal Detail
+        h1= title
+    div(data-role="content")
+        div.iphone-wrapper
+            iframe( src="/m/deal/"+deal._id.toHexString(), frameborder="no")

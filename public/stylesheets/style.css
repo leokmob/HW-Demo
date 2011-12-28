@@ -42,7 +42,7 @@ body {
   width: 200px;
 }
 .iphone-wrapper {
-  background: #fff url("images/iphone.png") scroll no-repeat 0px 0px;
+  background: #fff url("/images/iphone.png") scroll no-repeat 0px 0px;
   margin: 10px auto;
   width: 400px;
 }
