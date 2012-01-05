@@ -2,7 +2,7 @@ div(data-role="page", data-theme="d")
     div(data-role="header", data-theme="b")
         h1= title
     div(data-role="content")
-        ul(data-role="listview")
+        ul(data-role="listview", data-inset="true")
             - each deal in deals
                 li
                     a(href="/m/deal/"+deal._id.toHexString())!= deal.title
