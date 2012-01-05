@@ -1,16 +1,64 @@
-div(data-role="page", data-theme="d")
-    div(data-role="header")
-        a(href="/admin",data-role="button", data-icon="arrow-l", data-iconpos="left", data-theme="b", class="ui-btn-left") Deals
-        h1= title
-    div(data-role="content")
-        ul.deal(data-role="listview", data-inset="true")
-            li(data-role="list-divider")= deal.title
-            li.ui-hw-wrap
-                time.created_at(pubdate="pubdate")= deal.created_at
-                p.body= deal.body
-                p.body= deal.fileName
-        fieldset.ui-grid-a.ui-hw-button-wrapper-web
-            div.ui-block-a
-                a(href="/deal/push/"+deal._id.toHexString(), data-role="button",  data-iconpos="right", data-theme="e", data-icon="delete") PUSH THE DEAL
-            div.ui-block-b
-                a(href="/deal/preview/"+deal._id.toHexString(), data-role="button", data-icon="add", data-iconpos="right", data-theme="b") Preview     
+div.page_header_wrapper
+  div.page_header
+    h1= title 
+div.page_wrapper
+  div.sidebar_left
+    nav
+      ul
+        li
+          a(href="#") Menu 1
+        li
+          a(href="#") Menu 2
+        li
+          a(href="#") Menu 3
+  div.main_region
+    div.page_title_region
+      h2.ui-state-default Welcome Mr. Zapp
+      div.right-nav
+        a(data-role="button",href="/deal/new") Start a Deal
+    div.application_region
+      div#not-tabs
+        span.toolbar.ui-widget-header.ui-corner-all
+          a#back-deals(data-role="button",href="/admin") Return to Deals
+        div.deal.ui-widget.ui-widget-content.ui-corner-all
+          span.deal-image
+          span.deal-message
+            h4
+              label.btn-small(for="deal-title",data-role="button") edit Title
+              input#deal-title.subtle.full(value=deal.title)
+            div#deal-status.ui-widget-content.ui-corner-all
+              span This deal is: 
+              input#deal-status-on(type="radio",name="deal-status",checked="checked")
+              label(for="deal-status-on") On
+              input#deal-status-off(type="radio",name="deal-status")
+              label(for="deal-status-off") Off
+              span.deal-info
+                span.info-grabbed 40 grabbed
+                span.info-redeemed 15 redeemed
+            label.btn-small(for="deal-desc",data-role="button") edit Description
+            textarea#deal-desc.subtle= deal.body        
+            p.info Ending 
+              time
+                input#deal-date.subtle(type="text",value="08/02/2011 6:00 pm")
+              label.btn-small(for="deal-date",data-role="button") edit Date/Time
+            p UPC: 
+              input#deal-upc.subtle(value="1234 56789 123 2342")
+              label.btn-small(for="deal-upc",data-role="button") edit UPC
+            fieldset.ui-widget.ui-widget-content
+              legend Deal Locations
+              ul.deal-locations
+                li.ui-widget-content.ui-corner-all At all New England Neiman Marcus 
+                  span.deal-location-btns
+                    button.icon-edit.btn-small(href="#",data-role="button") Edit
+                    button.icon-delete.btn-small(href="#",data-role="button") Delete
+                button.btn-small(data-role="button") Add New Location
+          div.button-wrapper
+            a#btn-preview-deal(href="#",data-role="button") Preview
+            a#btn-push-deal.ui-state-highlight(href="/deal/push/"+deal._id.toHexString(),data-role="button") Push The Deal
+  div.clearingDiv
+footer.page_footer
+  p.copy Copyright 2012  
+  
+div#dialog-preview
+  div.iphone-wrapper
+    iframe( src="/m/deal/"+deal._id.toHexString(), frameborder="no")
