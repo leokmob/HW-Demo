@@ -81,8 +81,9 @@ footer p,
 .three_column .sidebar_left,
 .dashboard .sidebar_left{
 	float: left;	
-	width: 205px;
+/*	width: 205px;
 	margin-left:10px;
+	*/
 	position: absolute;
 }
 
@@ -111,7 +112,7 @@ footer p,
 }
 
 .dashboard .main_region {
-	margin:0px 10px 0px 230px;
+	margin:0px 10px 0px 10px;
 	min-height:250px;
 }
 
