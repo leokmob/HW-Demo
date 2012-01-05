@@ -1,0 +1,183 @@
+fieldset {
+			clear:both;
+			margin-bottom:1em;
+			}
+
+ fieldset legend
+			{
+				/*
+				border-bottom:2px solid #8ec55a;
+				display:block;
+				font-weight:bold;
+				line-height: 20px;
+				margin-bottom: 15px;
+    			padding-top: 0;
+				position:relative;
+				text-transform:uppercase;
+				width:100%;
+				color: #8ec55a;
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+				
+				*/
+				}
+				
+				 fieldset legend>a,
+				 fieldset legend>a:hover,
+				 fieldset legend>a:focus  {
+					cursor:default;
+					color: #8ec55a;}
+				
+				 h2 .btn-help,
+				fieldset legend .content-nav.inner .btn-help,
+				 fieldset legend>.btn-help {
+					background-position:0 0;
+					color:#fff;
+					display:block;
+					font-weight:bold;
+					height:17px;
+					position:absolute;
+					right:0;
+					text-align:center;
+					text-decoration:none;
+					text-indent:-99999em;
+					top: 0px;
+					width:16px;
+					}
+				 fieldset legend>.btn-help:hover {
+					background-position:0 -66px;
+					}
+			fieldset legend+.form-fields,
+			fieldset legend+.form-fields+.form-fields {
+				padding-top:1em;
+				}
+				
+		
+				
+			
+				.form-fields .data-display {
+					color: #000;
+					margin-bottom: 0px;
+					
+				}
+				.form-fields .form-input-region .data-display {
+					vertical-align: top;
+					
+				}
+
+				/*
+				.ie7 .form-fields .data-display {
+					font-size: 12px;
+					
+				}
+				
+			*/
+				
+				.form-input-region{
+					
+					 display: inline-block;
+			 
+			    width: 70%;
+				}
+				
+				.form-input-region  select,
+				.form-input-region input[type=numberui],
+				.form-input-region input[type=file],
+				.form-input-region input[type=number],
+				.form-input-region input[type=datetimeui],
+				.form-input-region input[type=text],
+				.form-input-region textarea{
+					font-size: .8em;
+					padding: .2em;
+					margin-left: 15px;
+				}
+				
+				
+
+				.form-input-region input[type=text],
+				.form-input-region textarea{
+					width: 95%;
+
+				}
+				
+				.form-input-region input[type=datetimeui]{
+					width: 50%;
+				
+				}
+				.form-input-region input[type=number],
+				.form-input-region input[type=numberui] {
+					width: 15%;
+					text-align: right;
+				}
+				
+				.form-input-region textarea{
+					height: 100px;
+				}
+				
+				.form-input-region [required=required]{
+					margin-left: 5px !important;
+					
+				}
+				
+				.form-input-region .sym-required{
+					float: left;
+					color: red;
+					padding-top:6px;
+				}
+				/*
+				.ie7 .form-input-region {
+					display: block;
+					 float: left;
+				}
+				
+				*/
+			 fieldset .form-fields {
+				list-style:none;
+				margin: 0px 0px 10px 0px;
+				}
+
+			fieldset .form-fields li {
+					padding-bottom:10px;
+					}
+				fieldset .form-fields label {
+						display:inline-block;
+						font-size:12px;
+						font-weight:bold;
+						padding-right:1em;
+						text-align:right;
+						width:25%;
+						vertical-align: top;
+						color: #333333;
+						padding-top: 6px;
+						}
+				/*
+				 
+				 	.ie7 fieldset .form-fields label{
+						display:block;
+						float:left;
+					}	
+					*/
+					
+					
+						 fieldset .form-fields .form-input-region label{
+							width: auto;
+							
+						}
+					
+				
+
+ fieldset .form-fields .form-input-region {
+	/* just in case you need this someday - MBM */
+	position: relative;
+	padding-bottom: 0px;
+	}
+	
+	.ie7 fieldset .form-fields .form-input-region {
+	/* just in case you need this someday - MBM */
+	position: relative;
+	padding-bottom: 15px;
+	}
+	
+ form fieldset .form-fields .form-input-region .wmc-button {
+		 
+	}

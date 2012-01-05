@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Leonid Kudryavtsev">
+	<!-- Date: 2011-12-10 -->
+<link rel="stylesheet" href="stylesheets/reset.css" />
+	
+	<link rel="stylesheet" href="stylesheets/redmond/jquery-ui-1.8.16.custom.css" />
+	<link rel="stylesheet" href="stylesheets/datetimepicker.jqueryui.css" />
+	
+	<link rel="stylesheet" href="stylesheets/master-layout.css" />
+	<link rel="stylesheet" href="stylesheets/admin.css" />
+	<link rel="stylesheet" href="stylesheets/forms.css" />
+	
+	<script src="jquery/jquery-1.6.2.min.js"></script>
+	<script src="jquery/jquery-ui-1.8.16.custom.min.js"></script>
+	<script src="jquery/jquery-ui-timepicker-addon.js"></script>
+	
+	
+	
+	<script src="jquery/local.js"></script>
+	
+</head>
+<body class="dashboard">
+	<div class="page_header_wrapper">
+		<div class="page_header"><h1>Publix</h1> 
+			
+			</div>
+	<div class="page_wrapper ">
+		<div class="sidebar_left">
+			
+		<nav>
+			<ul>
+				<li><a href="#">Menu 1</a></li>
+				<li><a href="#">Menu 2</a></li>
+				<li><a href="#">Menu 3</a></li>
+			</ul>
+		</nav>
+
+
+		</div>
+		<div class="main_region">
+			<div class="page_title_region">
+				<h2 class="ui-state-default">Welcome Mr. Test</h2>
+				<div class="right-nav">
+					<a data-role="button" href="deal_new.html">Start a Deal</a>
+				</div>
+			</div>
+			<div class="application_region">
+				
+				<div id="not-tabs" >
+				
+			
+						
+						<span class="toolbar ui-widget-header ui-corner-all">
+							<a id="back-deals" data-role="button" href="index.html">Return to Deals</a>
+						</span>
+				
+					
+				
+						<div class="deal ui-widget ui-widget-content ui-corner-all">
+							
+							
+							<form>
+						
+						<fieldset>
+                                <legend>New Deal</legend>
+                                
+                                <!--
+                                <ul class="form-fields">
+                                    
+                                    <li>
+                                        <label for="fundname">Fund Short Name:</label>
+                                        <div class="form-input-region">
+                                            <p class="data-display">WMP (Lux) II Commod</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="fundname">Fund Legal Name:</label>
+                                        <div class="form-input-region">
+                                            <p class="data-display">Wellington Management Portfolios (Luxembourg) II - Commodities Portfolio</p>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                                -->
+                                 <div class="form-fields">
+										<label for="deal-title"   >Title</label>
+										 <div class="form-input-region">
+											<input id="deal-title" required="required" type="text" placeholder="Title" class="ui-state-default ui-corner-all"  />
+										</div>
+									</div>
+										
+                               
+                               
+                               <div class="form-fields">
+                                       <label for="deal-desc" >Description</label>
+                                        <div class="form-input-region">
+                                            <textarea id="deal-desc" required="required"  class="ui-state-default ui-corner-all"></textarea>
+                                        </div>
+                               </div>
+                               
+                        
+									
+                               
+                               <div class="form-fields">
+                                        <label for="deal-upc" >UPC or Code Phrase</label>
+                                        <div class="form-input-region">
+                                            <input id="deal-upc"  placeholder="UPC or Code Phrase" required="required" type="text"  class="ui-state-default ui-corner-all"  />
+                                        </div>
+                               </div>
+                               
+                               
+                               <div class="form-fields">
+                                        <label for="deal-category">Item Category</label>
+                                        <div class="form-input-region">
+                                            <select id="deal-category" required="required" class="ui-state-default ui-corner-all">
+                                            	<option>::Category::</option>
+                                            	<option>House Wares</option>
+                                            	<option>Jewelry</option>
+                                            	<option>Food</option>
+                                            	<option>Sporting Goods</option>
+                                            	<option>Clothing</option>
+                                            </select>
+                                           
+                                        </div>
+                               </div>
+                               
+                               
+                               <div class="form-fields">
+                                        <label for="deal-date-start">Start Date</label>
+                                        <div class="form-input-region">
+                                            <input type="datetimeui" required="required" placeholder="Start Date"  class="ui-state-default ui-corner-all" id="deal-date-start"  />
+                                        </div>
+                               </div>
+                               
+                               <div class="form-fields">
+                                        <label for="deal-date-end">End Date</label>
+                                        <div class="form-input-region">
+                                            <input type="datetimeui" required="required" placeholder="End Date"  class="ui-state-default ui-corner-all" id="deal-date-end"  />
+                                        </div>
+                               </div>
+                               
+                               <div class="form-fields">
+                                        <label for="deal-type">Deal Type</label>
+                                        <div class="form-input-region">
+                                            <select id="deal-type" required="required" class="ui-state-default ui-corner-all">
+                                            	<option>Fixed Price</option>
+                                            	<option>Percentage</option>
+                                            	<option>Multi-order freebie</option>
+                                            </select>
+                                            <input id="deal-type-amount" type="numberui" required="required" placeholder=""  class="ui-state-default ui-corner-all"  /> Off
+                                       
+                                        </div>
+                               </div>
+                                <div class="form-fields">
+                                        <label for="deal-number-max">Max Number of Deals</label>
+                                        <div class="form-input-region">
+                                            <input id="deal-number-max" type="number" placeholder=""  class="ui-state-default ui-corner-all"   /> 
+                                       
+                                        </div>
+                               </div>
+                                <div class="form-fields">
+                                        <label for="deal-image">Upload Image</label>
+                                        <div class="form-input-region">
+                                             <input id="deal-image" type="file" required="required"  class="ui-state-default ui-corner-all"   /> 
+                                        </div>
+                               </div>
+                               
+                            </fieldset>
+                            
+                            	
+									<fieldset class="ui-widget ui-widget-content"><legend>Deal Locations</legend>
+									
+									
+									 <div class="form-fields">
+                                        <label for="deal-location-01">Location 1</label>
+                                        <div class="form-input-region">
+                                         
+                                            <select id="deal-location-01" required="required" class="ui-state-default ui-corner-all">
+                                            	<option>United States </option>
+                                            	<option>New England </option>
+                                            	<option>Mid Atlantic</option>
+                                     
+                                            	<option>East North Central</option>
+                                            	<option>West North Central</option>
+                                            	
+                                            	<option>South Atlantic</option>
+                                            	<option>East South Central</option>
+                                            	<option>West South Central</option>
+                                            	
+                                            	<option>Mountain</option>
+                                            	<option>Pacific</option>
+                                            </select>
+                                            <select id="deal-location-01" required="required" class="ui-state-default ui-corner-all">
+                                            	<option>Neiman Marcus</option>
+                                            	<option>Barneys New York</option>
+                                            	<option>Publix</option>
+                                           
+                                            </select>
+                                           
+                                        </div>
+                              		 </div>
+                              		 
+                              		  <div class="form-fields">
+                                        <label for=""></label>
+                                        <div class="form-input-region">
+                                           <button data-role="button" class="btn-small">Add New Location</button>
+                                        </div>
+                              		 </div>
+                               
+                               
+									
+									
+									
+									
+								</fieldset>
+                            
+                            
+                            <div class="button-wrapper">
+						
+								<a href="#" id="btn-save-deal" class="ui-state-highlight"  data-role="button">Save Deal</a>
+							</div>
+						
+						
+					</form>
+							
+							
+					
+							
+						</div>
+						
+				
+					
+				</div>
+								
+				
+				
+			</div>
+			<div class="clearingDiv"></div>
+		</div>
+	</div>
+	<footer class="page_footer">
+		<p class="copy">Copyright  2012 </p>
+	</footer>
+
+
+<div id="dialog-preview">
+	
+	<div class="iphone-wrapper">
+			<iframe src="http://ec2-50-16-158-234.compute-1.amazonaws.com:3000/m/deal/4ee998b97ab66bf356000001" frameborder="no"/>
+		</div>
+	
+</div>
+
+</body>
+
+</html>

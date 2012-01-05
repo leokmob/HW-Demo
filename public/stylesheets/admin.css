@@ -1,0 +1,226 @@
+
+
+body {
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+
+}
+
+
+nav{
+	position: relative;
+	top: 50px;
+}
+
+nav li a {
+	width: 190px;
+}
+
+
+.toolbar {
+		padding:  4px;
+		display: block;
+	}
+
+.right-nav	{
+	right: 15px;
+	top: 5px;
+	position: absolute;
+}
+
+
+.page_header h1 {
+	text-indent: -9999px;
+	background: #ffffff url(../images/logos/publix.jpg) no-repeat scroll 0px 0px;
+	height: 100px;
+
+	display: block;
+	background-size: auto 100px ;
+	
+}
+
+h2,
+h2.ui-state-default {
+	font-size: 2em;
+	line-height: 1.5em;
+	border:none;
+	background: none;
+	}
+	
+	
+.copy {
+	font-size: .8em;
+text-align: right;
+margin-right: 15px;
+}	
+
+.btn-small.ui-button-text-only .ui-button-text,
+.btn-small.ui-button .ui-button-text{
+	font-size: .8em;
+}
+.btn-small.ui-button-text-only .ui-button-text {
+padding: .2em .5em;
+
+}
+
+#selectable li {
+margin: 3px;
+padding: 0.4em;
+font-size: .8em;
+height: 18px;
+}
+
+
+.button-wrapper {
+	position: relative;
+	height: 50px;
+	text-align: right;
+}
+
+.button-wrapper a[data-role=button] {
+	
+}
+
+/* deals */
+.deal.ui-widget ,
+.deals .deal  a {
+	display: block;
+	
+	padding: 10px;
+	margin: 10px 0px;
+	text-decoration: none;
+	color: #000;
+}
+
+.deals .deal  a{
+
+	}
+
+.deal span.deal-image{
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	float: left;
+	margin-right: 15px;
+	background: #fff url(../images/default.gif) no-repeat scroll 0px 0px;
+	background-size: 100px 100px;
+}
+
+
+.deal span.deal-message {
+	display: block;
+	margin-left: 115px;
+	
+}
+
+.deal  h4 {
+	
+	margin: 5px 0px 10px 0px;
+}
+
+.deal  p {
+	font-size: .8em;
+	margin-bottom: .5em;
+	line-height: 1.2em;
+}
+
+
+.deal.ui-widget{margin-top: 15px;}
+
+.deal  p.info {}
+
+.info-grabbed,
+.info-redeemed{
+	color: orange;
+	margin-left: 20px;
+	
+}
+
+#deal-status{
+	position: relative;
+	margin: 15px 0px;
+	padding: 15px;
+	/*border: 1px solid #000;
+	-webkit-border-radius: 5px;
+	*/
+	}
+
+.deal-locations li{
+	position: relative;
+	display: block;
+	line-height: 40px;
+	padding: 0px 10px;
+	margin-bottom: 5px;
+}
+
+.deal-location-btns {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+	
+
+
+.deal-info {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	
+}
+
+
+input.subtle {
+	width: 165px;
+	
+}
+
+input.subtle.full {
+	width: 98%;
+	height:auto;
+	
+}
+
+
+textarea.subtle {
+	width: 100%;
+	height: 120px;
+}
+
+textarea.subtle,
+input.subtle {
+	border: 1px solid #fff;
+	
+}
+
+
+textarea.subtle:focus,
+input.subtle:focus {
+	border: 1px solid #000;
+	
+}
+
+fieldset.ui-widget-content{
+	margin: 10px 0px;
+	border-width: 1px 0px 1px 0px;
+	border-style: dotted;
+	padding: 15px 0px;
+}
+
+legend{
+	margin: 10px 0px;
+	padding-right: 20px;
+}
+
+
+
+.iphone-wrapper {
+  background: #fff url("/images/iphone.png") scroll no-repeat 0px 0px;
+  margin: 10px auto;
+  width: 400px;
+}
+iframe {
+  width: 320px;
+  height: 460px;
+  overflow: hidden;
+  margin: 146px 0px 130px 38px;
+}
