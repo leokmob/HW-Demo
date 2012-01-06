@@ -1,7 +1,8 @@
 div(data-role="page", data-theme="d")
     div(data-role="header", data-theme="b")
-        a(href="/m/deal/"+deal._id.toHexString(), data-icon="arrow-l", data-direction="reverse") Back
-        h1= deal.title
+        a(href="/m/deal/"+deal._id.toHexString(), data-icon="arrow-l", data-rel="back") Back
+        h1 Redeem Deals
+        a(href="/m/index.html", data-role="button", data-direction="reverse") Home
     div(data-role="content")
         div.deals(style="text-align:center;")
             //div.created_at= deal.created_at

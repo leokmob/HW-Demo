@@ -1,13 +1,28 @@
 div(data-role="page", data-theme="d")
     div(data-role="header", data-theme="b")
-        a(href="/m", data-role="button", data-icon="arrow-l", data-direction="reverse") All Deals
+        a.ui-btn-left(href="/m/deal_home.html",data-role="button",data-icon="arrow-l",data-rel="back") Back
         h1= deal.title
+        a(href="/m/index.html", data-role="button", data-direction="reverse") Home
     div(data-role="content")
         div.deals(style="text-align:center;")
             //div.created_at= deal.created_at
+            
             h3= deal.title
             h4= deal.body
             div
                 img(src="/images/" + deal.fileName, width="200px")
-            div(style="margin-top:30px;")
-                a(href="/m/code/"+deal._id.toHexString(), data-role="button", data-theme="b") Grab Deal
+    div(data-role="footer",data-position="fixed")
+        div(data-role="navbar")
+            ul 
+                li 
+                    a(href="/m/code/"+deal._id.toHexString(), data-theme="e") Grab This Deal!
+        div(data-role="navbar")
+            ul 
+                li 
+                    a.ui-btn-active(href="#") Deals 
+                li 
+                    a(href="#") Grabbox 
+                li 
+                    a(href="#") Games  
+                li 
+                    a(href="#") Friends

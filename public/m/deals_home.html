@@ -9,20 +9,25 @@
 
 
 
-<div data-role="page" data-theme="d">
+<div data-role="page" data-theme="d" >
 
 	<div data-role="header" data-theme="b">
-		<h1>Here and WOW</h1>
+		<a class="ui-btn-left" href="index.html" data-role="button" data-icon="arrow-l" data-direction="reverse" data-rel="back" >Back</a>
+		<h1>Categories</h1>
+		<a class="ui-btn-right" href="index.html" data-role="button" data-icon="" data-direction="reverse" >Home</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<h3>Welcome Mr. Zaap!</h3>	
+		
+		<label for="slider-0">Show Deals Within:</label>
+  		 <input type="range" name="slider" id="slider-0" value="4" min="0" max="10"  />Miles
+  		 
+		
 		<ul data-role="listview" data-inset="true">
-			<li><a href="deals_home.html">Deals</a></li>
-			<li><a href="">My Grab Box</a></li>
-			<li>My Shopping List<span class="ui-li-aside ui-li-desc">Coming Soon!</span></li>
-			<li>Games<span class="ui-li-aside ui-li-desc">Coming Soon!</span></li>
-			<li><a href="">Log Out</a></li>
+			<li><a href="/m">Housewares<span class="ui-li-count">8</span></a></li>
+			<li><a href="/m">Cosmetics<span class="ui-li-count">22</span></a></li>
+			<li><a href="/m">Food<span class="ui-li-count">108</span></a></li>
+			<li><a href="/m">Clothing<span class="ui-li-count">34</span></a></li>
 			
 			
 		</ul>
@@ -32,7 +37,7 @@
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
-			<li><a href="#">Deals</a></li>
+			<li><a href="#" class="ui-btn-active">Deals</a></li>
 			<li><a href="#">Grabbox</a></li>
 			<li><a href="#">Games </a></li>
 			<li><a href="#">Friends</a></li>
