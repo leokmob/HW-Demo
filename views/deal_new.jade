@@ -1,18 +1,94 @@
-div(data-role="page", data-theme="d")
-    div(data-role="header")
-        a(href="/admin",data-role="button", data-icon="arrow-l", data-iconpos="left", data-theme="b", class="ui-btn-left") Deals
-        h1= title
-    div(data-role="content")
-        form( method="post", enctype="multipart/form-data")
-            div
-                div(data-role="fieldcontain")
-                    label(for="editDealTitle") Title 
-                    input#editDealTitle(type="text", name="title", id="editDealTitle")
-                div(data-role="fieldcontain")
-                    label(for="editDealBody") Body
-                    textarea#editDealBody( name="body", rows=20, id="editDealBody)
-                div(data-role="fieldcontain")
-                    label.ui-input-text(for="editDealImage") Upload Image
-                    input#editDealImage(type="file", name="image")
-                div#editDealSubmit.form-btn-wrapper
-                    input(type="submit", value="Save", data-theme="b")
+div.page_header_wrapper
+  div.page_header
+    h1= title 
+div.page_wrapper
+  div.sidebar_left
+  div.main_region
+    div.page_title_region
+      h2.ui-state-default Welcome Mr. Zapp
+      div.right-nav
+        a(data-role="button",href="/deal/new") Start a Deal
+    div.application_region
+      div#not-tabs
+        span.toolbar.ui-widget-header.ui-corner-all
+          a#back-deals(data-role="button",href="/admin") Return to Deals
+        div.deal.ui-widget.ui-widget-content.ui-corner-all
+          form( method="post", enctype="multipart/form-data") 
+            fieldset 
+              legend New Deal 
+              div.form-fields 
+                label(for="editDealTitle") Title
+                div.form-input-region 
+                  input#editDealTitle.ui-state-default.ui-corner-all(required="required",type="text",name="title",placeholder="Title") 
+              div.form-fields
+                label(for="editDealBody") Description 
+                div.form-input-region 
+                  textarea#editDealBody.ui-state-default.ui-corner-all(name="body",required="required")
+              div.form-fields 
+                label(for="deal-upc") UPC or Code Phrase 
+                div.form-input-region 
+                  input#deal-upc.ui-state-default.ui-corner-all(placeholder="UPC or Code Phrase",required="required",type="text") 
+              div.form-fields 
+                label(for="deal-category) Item Category 
+                div.form-input-region 
+                  select#deal-category.ui-state-default.ui-corner-all(required="required") 
+                    option ::Category:: 
+                    option House Wares 
+                    option Jewelry 
+                    option Food 
+                    option Sporting Goods 
+                    option Clothing 
+              div.form-fields 
+                label(for="deal-date-start") Start Date 
+                div.form-input-region 
+                  input#deal-date-start.ui-state-default.ui-corner-all(type="datetimeui",required="required",placeholder="Start Date") 
+              div.form-fields 
+                label(for="deal-date-end") End Date 
+                div.form-input-region 
+                  input#deal-date-end.ui-state-default.ui-corner-all(type="datetimeui",required="required",placeholder="End Date") 
+              div.form-fields 
+                label(for="deal-type") Deal Type 
+                div.form-input-region 
+                  select#deal-type.ui-state-default.ui-corner-all(required="required") 
+                    option Fixed Price 
+                    option Percentage 
+                    option Multi-order freebie 
+                  input#deal-type-amount.ui-state-default.ui-corner-all(type="numberui",required="required")
+                  span Off  
+               div.form-fields 
+                 label(for="deal-number-max") Max Number of Deals 
+                 div.form-input-region 
+                   input#deal-number-max.ui-state-default.ui-corner-all(type="number") 
+               div.form-fields 
+                 label(for="editDealImage") Upload Image 
+                 div.form-input-region 
+                   input#editDealImage.ui-state-default.ui-corner-all(name="image",type="file",required="required")
+            fieldset.ui-widget.ui-widget-content 
+              legend Deal Locations 
+              div.form-fields 
+                label(for="deal-location-01") Location 1 
+                div.form-input-region 
+                  select#deal-location-01.ui-state-default.ui-corner-all(required="required") 
+                    option United States 
+                    option New England 
+                    option Mid Atlantic 
+                    option East North Central 
+                    option West North Central 
+                    option South Atlantic 
+                    option East South Central 
+                    option West South Central 
+                    option Mountain 
+                    option Pacific 
+                  select#deal-location-01.ui-state-default.ui-corner-all(required="required") 
+                    option Neiman Marcus 
+                    option Barneys New York 
+                    option Publix 
+              div.form-fields 
+                label 
+                div.form-input-region 
+                  button.btn-small(data-role="button") Add New Location
+            div.button-wrapper 
+              input#btn-save-deal.ui-state-highlight(type="submit", value="Save Deal", data-role="button")
+  div.clearingDiv
+footer.page_footer
+  p.copy Copyright 2012
