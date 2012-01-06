@@ -1,128 +1,112 @@
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>untitled</title>
-	<meta name="generator" content="TextMate http://macromates.com/">
-	<meta name="author" content="Leonid Kudryavtsev">
-	<!-- Date: 2011-12-10 -->
-<link rel="stylesheet" href="stylesheets/reset.css" />
+<html>
+	<head>
 	
-	<link rel="stylesheet" href="stylesheets/redmond/jquery-ui-1.8.16.custom.css" />
+		<title>TITLE</title>
 	
-	<link rel="stylesheet" href="stylesheets/master-layout.css" />
-	<link rel="stylesheet" href="stylesheets/admin.css" />
-	<link rel="stylesheet" href="stylesheets/forms.css" />
+		<!-- Date: 2011-12-10 -->
+		<link rel="stylesheet" href="stylesheets/reset.css" />
+		
+		<link rel="stylesheet" href="stylesheets/redmond/jquery-ui-1.8.16.custom.css" />
+		
+		<link rel="stylesheet" href="stylesheets/master-layout.css" />
+		<link rel="stylesheet" href="stylesheets/admin.css" />
+		<link rel="stylesheet" href="stylesheets/forms.css" />
+		
+		<script src="jquery/jquery-1.6.2.min.js"></script>
+		<script src="jquery/jquery-ui-1.8.16.custom.min.js"></script>
+		
+		<script src="jquery/local.js"></script>
 	
-	<script src="jquery/jquery-1.6.2.min.js"></script>
-	<script src="jquery/jquery-ui-1.8.16.custom.min.js"></script>
-	
-	<script src="jquery/local.js"></script>
-	
-	
-	
-</head>
-<body class="dashboard">
-	<div class="page_header_wrapper">
-		<div class="page_header"><h1>Publix</h1> 
-			
+	</head>
+	<body class="dashboard">
+		<div class="page_header_wrapper">
+			<div class="page_header">
+				<h1>Publix</h1> 
 			</div>
-	<div class="page_wrapper ">
-		<div class="sidebar_left">
-			
-		<nav>
-			<ul>
-				<li><a href="#">Menu 1</a></li>
-				<li><a href="#">Menu 2</a></li>
-				<li><a href="#">Menu 3</a></li>
-				
-			</ul>
-		</nav>
-
-
-		</div>
-		<div class="main_region">
-			<div class="page_title_region">
-				<h2 class="ui-state-default">Welcome Mr. Test</h2>
-				<div class="right-nav">
-					<a data-role="button" href="deal_new.html">Start a Deal</a>
-				</div>
-			</div>
-			<div class="application_region">
-				
-				<div id="tabs">
+		<div class="page_wrapper ">
+			<div class="sidebar_left">
+				<!--
+				<nav>
 					<ul>
-						<li><a href="#tabs-1">Current Deals</a></li>
-						<li><a href="#tabs-2">Scheduled Deals</a></li>
-						<li><a href="#tabs-3">Past Deals</a></li>
-						<li><a href="#tabs-4">My Analytics</a></li>
+						<li><a href="#">Menu 1</a></li>
+						<li><a href="#">Menu 2</a></li>
+						<li><a href="#">Menu 3</a></li>
 					</ul>
-					<div id="tabs-1">
-						<!--<h3>Current Deals</h3>-->
-						
-					
-						
-						<span id="" class="toolbar sort ui-widget-header ui-corner-all">
-							<span>Sort:</span>
-							<button id="sort-time">Ending Time</button>
-							<button id="sort-alpha">Alphabetical</button>
-							<button id="sort-pop">Popularity</button>
-						</span>
-					
-					
-					<ul class="deals">
-						<li class="deal ">
-							<a href="deal_show.html" class="ui-widget-content ui-corner-all">
-								<span class="deal-image"></span>
-								<span class="deal-message">
-									<h4>99.9% off on all Gucci, Louis Vuitton, Fendi, and Prada shoes</h4>
-									<p>“Gucci Gucci, Louis Louis, Fendi Fendi, Prada” up-and-coming rap star Kreashawn not-quite-famously sang on her debut single. Now you too can own a pair of these fabulous name-brand shoes for a percentage off that looks like it should be on a bottle of hand sanitizer instead of a store shelf...</p>
-									<p class="info">Ending <time>6:00 pm 08/02/2011 (4hrs 34 mins)</time> <span class="info-grabbed">40 grabbed</span> <span class="info-redeemed">15 redeemed</span></p>
-							</span>
-							</a>
-						</li>
-						<li  class="deal">
-							<a href="deal_show.html" class="ui-widget-content ui-corner-all">
-								<span class="deal-image"></span>
-								<span class="deal-message">
-									<h4>99.9% off on all Gucci, Louis Vuitton, Fendi, and Prada shoes</h4>
-									<p class="desc">“Gucci Gucci, Louis Louis, Fendi Fendi, Prada” up-and-coming rap star Kreashawn not-quite-famously sang on her debut single. Now you too can own a pair of these fabulous name-brand shoes for a percentage off that looks like it should be on a bottle of hand sanitizer instead of a store shelf...</p>
-									<p class="info">Ending <time>6:00 pm 08/02/2011 (4hrs 34 mins)</time> <span class="info-grabbed">40 grabbed</span> <span class="info-redeemed">15 redeemed</span></p>
-								</span>
-							</a>
-						</li>	
-					</ul>	
-						
-						
-					</div>
-					<div id="tabs-2">
-						<h3>Scheduled Deals</h3>
-						<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-					</div>
-					<div id="tabs-3">
-						<h3>Past Deals</h3>
-						<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-						<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-					</div>
-					<div id="tabs-4">
-						<h3>Analytics</h3>
-						<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-						<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-					</div>	
-				</div>
-								
-				
-				
+				</nav>
+				-->
 			</div>
-			<div class="clearingDiv"></div>
+			<div class="main_region">
+				<div class="page_title_region">
+					<h2 class="ui-state-default">Welcome Mr. Zapp</h2>
+					<div class="right-nav">
+						<a data-role="button" href="deal_new.html">Start a Deal</a>
+					</div>
+				</div>
+				<div class="application_region">
+					
+					
+					<div id="tabs">
+						<ul>
+							<li><a href="#tabs-1">Current Deals</a></li>
+							<li><a href="#tabs-2">Scheduled Deals</a></li>
+							<li><a href="#tabs-3">Past Deals</a></li>
+							<li><a href="#tabs-4">My Analytics</a></li>
+						</ul>
+						<div id="tabs-1">
+							<span id="" class="toolbar sort ui-widget-header ui-corner-all">
+								<span>Sort:</span>
+								<button id="sort-time">Ending Time</button>
+								<button id="sort-alpha">Alphabetical</button>
+								<button id="sort-pop">Popularity</button>
+							</span>
+		
+							<ul class="deals">
+								<li class="deal ">
+									<a href="deal_show.html" class="ui-widget-content ui-corner-all">
+										<span class="deal-image"></span>
+										<span class="deal-message">
+											<h4>99.9% off on all Gucci, Louis Vuitton, Fendi, and Prada shoes</h4>
+											<p>“Gucci Gucci, Louis Louis, Fendi Fendi, Prada” up-and-coming rap star Kreashawn not-quite-famously sang on her debut single. Now you too can own a pair of these fabulous name-brand shoes for a percentage off that looks like it should be on a bottle of hand sanitizer instead of a store shelf...</p>
+											<p class="info">Ending <time>6:00 pm 08/02/2011 (4hrs 34 mins)</time> <span class="info-grabbed">40 grabbed</span> <span class="info-redeemed">15 redeemed</span></p>
+									</span>
+									</a>
+								</li>
+								<li  class="deal">
+									<a href="deal_show.html" class="ui-widget-content ui-corner-all">
+										<span class="deal-image"></span>
+										<span class="deal-message">
+											<h4>99.9% off on all Gucci, Louis Vuitton, Fendi, and Prada shoes</h4>
+											<p class="desc">“Gucci Gucci, Louis Louis, Fendi Fendi, Prada” up-and-coming rap star Kreashawn not-quite-famously sang on her debut single. Now you too can own a pair of these fabulous name-brand shoes for a percentage off that looks like it should be on a bottle of hand sanitizer instead of a store shelf...</p>
+											<p class="info">Ending <time>6:00 pm 08/02/2011 (4hrs 34 mins)</time> <span class="info-grabbed">40 grabbed</span> <span class="info-redeemed">15 redeemed</span></p>
+										</span>
+									</a>
+								</li>	
+							</ul>	
+							
+							
+						</div>
+						<div id="tabs-2">
+							<h3>Scheduled Deals</h3>
+							<p>Scheduled Deals will be displayed here.</p>
+						</div>
+						<div id="tabs-3">
+							<h3>Past Deals</h3>
+							<p>Past Deal history will be displayed here.</p>	
+						</div>
+						<div id="tabs-4">
+							<h3>Analytics</h3>
+							<p>Analytics will be displayed here.</p>
+						</div>	
+					</div>
+									
+					
+					
+				</div>
+				<div class="clearingDiv"></div>
+			</div>
 		</div>
-	</div>
-	<footer class="page_footer">
-		<p class="copy">Copyright  2012 </p>
-	</footer>
-
-
-
-
-</body>
-
+		<footer class="page_footer">
+			<p class="copy">Copyright  2012 </p>
+		</footer>
+	</body>
 </html>
