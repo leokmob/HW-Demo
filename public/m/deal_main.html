@@ -2,42 +2,49 @@
 <head>
 	<title>Here and WOW</title>
 	<link rel='stylesheet' href='http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css' />
+	<link rel='stylesheet' href='../stylesheets/jquerymobile.overrides.css' />
     <script type='text/javascript' src='http://code.jquery.com/jquery-1.6.4.min.js'></script>
     <script type='text/javascript' src='http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js'></script>
+    <script src="../jquery/local-m.js"></script>
 </head>
 <body>
 
 
 
-<div data-role="page" data-theme="d" >
+<div data-role="page" data-theme="d">
 
-	<div data-role="header" data-theme="b">
+	<div data-role="header" data-theme="b" data-position="fixed">
 		<a class="ui-btn-left" href="index.html" data-role="button" data-icon="arrow-l" data-direction="reverse" data-rel="back" >Back</a>
-		<h1>Categories</h1>
+		<h1>Publix</h1>
 		<a class="ui-btn-right" href="index.html" data-role="button" data-icon="" data-direction="reverse" >Home</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		
-		<label for="slider-0">Show Deals Within:</label>
-  		 <input type="range" name="slider" id="slider-0" value="4" min="0" max="10"  />Miles
-  		 
+
+
+		<ul data-role="listview" data-inset="true" data-dividertheme="d" data-theme="d">
+			<li data-role="list-divider">
+				<a href="">
+					<img src="../images/logos/publix-icon.jpeg" class="ui-li-thumb"/>
+					<h3>Publix</h3>
+					<p class="ui-li-desc">38 Main St</p>
+					<p class="ui-li-desc">Yourtown, ME 00021</p>
+					<p class="ui-li-count">21 meters</p>
+				</a>
+			</li>
+			<li><a href="/m">Deals</a></li>
+			<li><a href="grabbed_deals.html">Grab Box<span class="ui-li-count">0</span></a></li>
+			<li>Shopping List<span class="ui-li-aside ui-li-desc">Coming Soon!</span></li>
+			<li>Games<span class="ui-li-aside ui-li-desc">Coming Soon!</span></li>
 		
-		<ul data-role="listview" data-inset="true">
-			<li><a href="/m">Housewares<span class="ui-li-count">8</span></a></li>
-			<li><a href="/m">Cosmetics<span class="ui-li-count">22</span></a></li>
-			<li><a href="/m">Food<span class="ui-li-count">108</span></a></li>
-			<li><a href="/m">Clothing<span class="ui-li-count">34</span></a></li>
-			
-			
 		</ul>
-			
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
-			<li><a href="#" class="ui-btn-active">Deals</a></li>
+			<li><a href="index.html">Deals</a></li>
 			<li><a href="#">Grabbox</a></li>
 			<li><a href="#">Games </a></li>
 			<li><a href="#">Friends</a></li>

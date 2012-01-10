@@ -13,32 +13,33 @@
 
 <div data-role="page" data-theme="d">
 
-	<div data-role="header" data-theme="b">
-		
-		<h1>Here and WOW</h1>
-		
+	<div data-role="header" data-theme="b" data-position="fixed">
+		<a class="ui-btn-left" href="index.html" data-role="button" data-icon="arrow-l" data-direction="reverse" >Back</a>
+		<h1>Grabbed Deals</h1>
+		<a class="ui-btn-right" href="index.html" data-role="button" data-icon="" data-direction="reverse" >Home</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<h3>Welcome Mr. Zaap!</h3>	
 		
-		<ul data-role="listview" data-inset="true" data-theme="e">
-			<li data-role="list-divider">Deals</li>
-			<li><a href="by_location.html">By Location</a></li>
-			<li><a href="by_category.html">By Category</a></li>
-			
-		</ul>
+        <h2>Your Deals:</h2>
+		<ul data-role="listview" data-inset="true" data-dividertheme="d" data-theme="d">
+			<li data-role="list-divider">
+				<a href="/m/deal/1">
+					<h3>Save $1 on Crest Toothpaste</h3>
+					
+				</a>
+			</li>
 
-			
-			<a href="" data-role="button" data-icon="back">Log Out</a>
-			
+		</ul>
+		<a id="#redeem-deal" href="/m/code/1" data-role="button"  data-theme="e">Redeem Deals!</a>
+		
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
 			<li><a href="index.html">Deals</a></li>
-			<li><a href="#">Grabbox</a></li>
+			<li><a href="#">Grabbox</a><small class="badge">1</small></li>
 			<li><a href="#">Games </a></li>
 			<li><a href="#">Friends</a></li>
 		</ul>

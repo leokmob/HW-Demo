@@ -1,0 +1,31 @@
+
+.ui-li-heading {
+	margin: 0.4em 0;
+}
+
+.ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e { position: relative; }
+
+
+.badge {
+
+background-image: -webkit-gradient(radial, 50% -130%, 25, 50% 0, 54, color-stop(2%, rgba(255, 255, 255, 0.3)), color-stop(4%, rgba(31, 31, 31, 0.1)), color-stop(38%, rgba(239, 239, 239, 0.1)));
+background-color: red;
+border: .25em solid white;
+color: white;
+display: block;
+font: bold .72em "Helvetica Neue", Helvetica;
+height: 1.1em;
+line-height: 1em;
+min-width: .5em;
+overflow: hidden;
+padding: .125em .375em;
+position: absolute;
+text-shadow: 0px -1em 1em rgba(0, 0, 0, 0.3);
+top: 2px;
+right: 2px;
+vertical-align: middle;
+z-index: 1;
+-webkit-box-shadow: 0px .1875em .3125em rgba(0, 0, 0, 1.0);
+-webkit-border-radius: .8125em;
+
+}

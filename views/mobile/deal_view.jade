@@ -1,12 +1,12 @@
 div(data-role="page", data-theme="d")
-    div(data-role="header", data-theme="b")
-        a.ui-btn-left(href="/m/deal_home.html",data-role="button",data-icon="arrow-l",data-rel="back") Back
+    div(data-role="header", data-theme="b") 
+        a(href="/m/", data-role="button", data-direction="reverse",data-icon="arrow-l") Deals
         h1= deal.title
-        a(href="/m/index.html", data-role="button", data-direction="reverse") Home
+        a(href="/m/deal_main_g.html",data-role="button", data-direction="reverse",data-icon="arrow-l") Main
     div(data-role="content")
         div.deals(style="text-align:center;")
             //div.created_at= deal.created_at
-            
+            a#grab-deal(href="../grabbed_deals.html", data-role="button", data-theme="e") Grab This Deal!
             h3= deal.title
             h4= deal.body
             div
@@ -15,13 +15,9 @@ div(data-role="page", data-theme="d")
         div(data-role="navbar")
             ul 
                 li 
-                    a(href="/m/code/"+deal._id.toHexString(), data-theme="e") Grab This Deal!
-        div(data-role="navbar")
-            ul 
+                    a(href="/m/index.html") Deals  
                 li 
-                    a.ui-btn-active(href="#") Deals 
-                li 
-                    a(href="#") Grabbox 
+                    a(href="../grabbed_deals.html") Grabbox 
                 li 
                     a(href="#") Games  
                 li 

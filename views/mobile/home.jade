@@ -9,12 +9,12 @@ div(data-role="page", data-theme="d")
                 li
                     a(href="/m/deal/"+deal._id.toHexString())
                       h3= deal.title
-                      p.ui-li-desc 4 days remaining
+                      p.ui-li-desc= deal.created_at
     div(data-role="footer",data-position="fixed")
         div(data-role="navbar")
             ul 
                 li 
-                    a.ui-btn-active(href="#") Deals 
+                    a(href="/m/index.html") Deals 
                 li 
                     a(href="#") Grabbox 
                 li 

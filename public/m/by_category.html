@@ -11,26 +11,28 @@
 
 
 
-<div data-role="page" data-theme="d">
+<div data-role="page" data-theme="d" >
 
 	<div data-role="header" data-theme="b">
-		
-		<h1>Here and WOW</h1>
-		
+		<a class="ui-btn-left" href="index.html" data-role="button" data-icon="arrow-l" data-direction="reverse" data-rel="back" >Back</a>
+		<h1>By Category</h1>
+		<a class="ui-btn-right" href="index.html" data-role="button" data-icon="" data-direction="reverse" >Home</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<h3>Welcome Mr. Zaap!</h3>	
 		
-		<ul data-role="listview" data-inset="true" data-theme="e">
-			<li data-role="list-divider">Deals</li>
-			<li><a href="by_location.html">By Location</a></li>
-			<li><a href="by_category.html">By Category</a></li>
+		<label for="slider-0">Show Deals Within:</label>
+  		 <input type="range" name="slider" id="slider-0" value="4" min="0" max="10"  />Miles
+  		 
+		
+		<ul data-role="listview" data-inset="true">
+			<li><a href="/m">Housewares<span class="ui-li-count">8</span></a></li>
+			<li><a href="/m">Cosmetics<span class="ui-li-count">22</span></a></li>
+			<li><a href="/m">Food<span class="ui-li-count">108</span></a></li>
+			<li><a href="/m">Clothing<span class="ui-li-count">34</span></a></li>
+			
 			
 		</ul>
-
-			
-			<a href="" data-role="button" data-icon="back">Log Out</a>
 			
 	</div><!-- /content -->
 
