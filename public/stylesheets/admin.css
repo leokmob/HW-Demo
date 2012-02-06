@@ -31,10 +31,11 @@ nav li a {
 .page_header h1 {
 	text-indent: -9999px;
 	background: #ffffff url(../images/logos/publix.jpg) no-repeat scroll 0px 0px;
-	height: 100px;
-
+	background: #ffffff url(../images/logos/logo_onboard_anim.gif) no-repeat scroll 0px 0px;
+	height: 145px;
+margin-left: 20px;
 	display: block;
-	background-size: auto 100px ;
+	background-size: auto 145px ;
 	
 }
 
