@@ -32,10 +32,11 @@ nav li a {
 	text-indent: -9999px;
 	background: #ffffff url(../images/logos/publix.jpg) no-repeat scroll 0px 0px;
 	background: #ffffff url(../images/logos/logo_onboard_anim.gif) no-repeat scroll 0px 0px;
-	height: 145px;
+	background: #ffffff url(../images/hdr-herewow.png) no-repeat scroll 0px 0px;
+	height: 140px;
 margin-left: 20px;
 	display: block;
-	background-size: auto 145px ;
+
 	
 }
 
@@ -85,7 +86,7 @@ height: 18px;
 .deal.ui-widget ,
 .deals .deal  a {
 	display: block;
-	
+	min-height: 110px;
 	padding: 10px;
 	margin: 10px 0px;
 	text-decoration: none;
@@ -104,6 +105,7 @@ height: 18px;
 	float: left;
 	margin-right: 15px;
 	background: #fff url(../images/default.gif) no-repeat scroll 0px 0px;
+	background: #fff url(../images/deal-herewow.png) no-repeat scroll 0px 0px;
 	background-size: 100px 100px;
 }
 

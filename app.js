@@ -133,7 +133,7 @@ app.post('/deal/addOpenInfo', function(req, res) {
 app.get('/m/deal/:id', function(req, res) {
     dealRepository.findById(req.params.id, function(error, deal) {
 		if (deal.fileName == "") {
-			deal.fileName = "default.gif"
+			deal.fileName = "deal-herewow.png"
 		}
 		console.log(deal)
         res.render('mobile/deal_view.jade', { locals: {
