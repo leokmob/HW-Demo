@@ -29,11 +29,11 @@ DealRepository.prototype.save = function(deals, callback) {
   callback(null, deals);
 };
 
-/* Lets bootstrap with dummy data */
-new DealRepository().save([
-  {title: 'Save $1 on Crest Toothpaste', body: 'Save $1 on Crest Toothpaste, because you always need toothpaste.', fileName: ''},
-  {title: 'Save $2 on Crest Toothpaste', body: 'Save $2 on Crest Toothpaste when you need on for home and one to leave at your significant others place.', fileName: ''},
-  {title: 'Save $5 on Crest Toothpaste', body: 'Save $5 on Crest Toothpaste when you stock up your mountain retreat house.  $5 off when you buy 10!', fileName: ''}
+/* Lets bootstrap with dummy data */  
+new DealRepository().save([/*
+  {title: 'Save $1', body: 'Save $1 on your product, because you always need toothpaste.', fileName: ''},
+  {title: 'Save $2', body: 'Save $2 on your product when you need on for home and one to leave at your significant others place.', fileName: ''},
+  {title: 'Save $5', body: 'Save $5 on Crest Toothpaste when you stock up your mountain retreat house.  $5 off when you buy 10!', fileName: ''}*/
 ], function(error, deals){});
 
 exports.DealRepository = DealRepository;
